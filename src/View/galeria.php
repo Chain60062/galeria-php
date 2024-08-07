@@ -1,10 +1,10 @@
 <?php
 // checando se usuario esta logado
+use GaleriaPHP\Controller\{CategoriaController, ImagensController};
+
 if (!isset($_SESSION['user'])) {
     header('location: ..');
 } else {
-    require_once "./controller/CategoriaController.php";
-    require_once "./controller/ImagensController.php";
     $CategoriaController = new CategoriaController();
     $ImagensController = new ImagensController();
 }
@@ -31,7 +31,7 @@ if (!isset($_SESSION['user'])) {
 
 <body id="body">
 
-    <div class="wrapper">
+    <div class="wrGaleriaPHPer">
 
         <!-- SIDEBAR  -->
 
@@ -46,7 +46,7 @@ if (!isset($_SESSION['user'])) {
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Galeria</a>
                 </li>
                 <li>
-                    <a href="./?classe=Config&metodo=view">Configurações</a>
+                    <a href="./?class=Config&method=view">Configurações</a>
                 </li>
 
             </ul>
@@ -59,7 +59,7 @@ if (!isset($_SESSION['user'])) {
 
             <!-- NAVBAR TOP -->
 
-            <?php include('./inc/header.php'); ?>
+            <?php require_once('src/Templates/header.php'); ?>
 
             <!-- FOTOS -->
 

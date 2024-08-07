@@ -14,7 +14,7 @@ if (!isset($_SESSION['user'])) {
                     <li class="list-group-item"><a>Alterar Senha</a></li>
                 </ul>
                 
-                <form action="./?classe=Config&metodo=alterImage">
+                <form action="./?class=Config&method=alterImage">
                 <label for="profilePic">Alterar foto de perfil:</label>
                 <div class="form-group">
                     <input type="file" class="form-control" id="profilePic" name="profilePic" />

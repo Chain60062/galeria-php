@@ -20,7 +20,7 @@
             } ?>
 
             <!-- FORMULARIO -->
-            <form id="login-form" class="form" action="./?classe=Auth&metodo=login" method="post">
+            <form id="login-form" class="form" action="./?class=Auth&method=login" method="post">
               <h3 class="text-info">Iniciar Sessão</h3>
 
               <div class="form-group">
@@ -42,7 +42,7 @@
               </div>
 
               <div id="register-link" class="text-right">
-                <p>Não possui conta? <a href="./?classe=Auth&metodo=signin" class="text-info">Cadastrar</a></p>
+                <p>Não possui conta? <a href="./?class=Auth&method=signin" class="text-info">Cadastrar</a></p>
               </div>
             </form>
           </div>

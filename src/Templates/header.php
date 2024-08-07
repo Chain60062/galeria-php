@@ -30,7 +30,7 @@
                 </li>
 
                 <li class="nav-item item-icon">
-                    <a class="nav-link" href="./?classe=Auth&metodo=logout">
+                    <a class="nav-link" href="./?class=Auth&method=logout">
                         <i class="fa fa-sign-out" aria-hidden="true"></i>
                         Sair
                     </a>

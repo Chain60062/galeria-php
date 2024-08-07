@@ -15,7 +15,7 @@ if (!isset($_SESSION['user'])) {
                 </button>
             </div>
             <div class="modal-body">
-                <form action="./?classe=Categoria&metodo=create" method="post">
+                <form action="./?class=Categoria&method=create" method="post">
                     <div class="form-group">
                         <label for="categoria">Nome da categoria: </label>
                         <input type="text" class="form-control" id="categoria" name="categoria" placeholder="Ex: férias, Alemanha, comida..." required />

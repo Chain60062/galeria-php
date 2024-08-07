@@ -1,4 +1,8 @@
 <?php
+namespace GaleriaPHP\Model;
+use \PDOException;
+use \PDO;
+
 class Categoria
 {
     private $id;
@@ -9,8 +13,7 @@ class Categoria
     public function __construct($id = null)
     {
         $this->id = $id;
-        // constantes de inc/Config.php
-        $this->con = new PDO(SERVIDOR, USER, SENHA);
+        $this->con = new PDO($_ENV["DB_DSN"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"]);
         $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     public function create()
@@ -30,7 +33,7 @@ class Categoria
             $row = $sql->fetchAll(PDO::FETCH_OBJ);
             return $row;
 
-            include './view/upload.php';
+            require_once 'src/View/upload.php';
         } catch (PDOException $e) {
             $_SESSION['msg'] = 'Ops! algo deu errado' . $e;
         }

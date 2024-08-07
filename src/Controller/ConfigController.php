@@ -1,9 +1,23 @@
 <?php
-require_once './model/Imagem.php';
-class UploadController
-{
+namespace GaleriaPHP\Controller;
 
-    public function upload()
+use GaleriaPHP\Model\{User, Imagem};
+
+class ConfigController
+{
+    public function view()
+    {
+        require_once('src/View/configs.php');
+    }
+    public function deleteAccount()
+    {
+        
+    }
+    public function alterAccount()
+    {
+
+    }
+    public function alterImage()
     {
         $obj = new Imagem();
 
@@ -17,11 +31,9 @@ class UploadController
                     $obj->setCaminho($location . $name);
                     $obj->setUserId($_SESSION['user']->id);
                     $obj->create();
-
-                    header('location: ./');
                 }
             } else {
-                $_SESSION['msg'] = 'Escolha um arquivo';
+                echo 'You should select a file to upload !!';
             }
         }
     }

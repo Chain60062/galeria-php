@@ -1,2 +1,10 @@
-uploads
-config/Config.php
+/**/logs
+/**/*.log
+/**/.vscode/*
+/**/!.vscode/extensions.json
+/**/.idea
+/**/.DS_Store
+/**/.env
+!.env.example
+/uploads/
+/vendor/

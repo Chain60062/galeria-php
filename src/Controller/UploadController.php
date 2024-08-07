@@ -1,21 +1,10 @@
 <?php
-require_once('./model/User.php');
+namespace GaleriaPHP\Controller;
 
-class ConfigController
+class UploadController
 {
-    public function view()
-    {
-        include('./view/configs.php');
-    }
-    public function deleteAccount()
-    {
-        
-    }
-    public function alterAccount()
-    {
 
-    }
-    public function alterImage()
+    public function upload()
     {
         $obj = new Imagem();
 
@@ -29,9 +18,11 @@ class ConfigController
                     $obj->setCaminho($location . $name);
                     $obj->setUserId($_SESSION['user']->id);
                     $obj->create();
+
+                    header('location: ./');
                 }
             } else {
-                echo 'You should select a file to upload !!';
+                $_SESSION['msg'] = 'Escolha um arquivo';
             }
         }
     }

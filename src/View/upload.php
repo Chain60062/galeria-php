@@ -17,7 +17,7 @@
                     // reseta mensagem de erro
                     unset($_SESSION['msg']);
                 } ?>
-                <form action="./?classe=Upload&metodo=upload" method="post" enctype="multipart/form-data">
+                <form action="./?class=Upload&method=upload" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <input type="file" class="form-control" id="image" name="image" required />
                     </div>

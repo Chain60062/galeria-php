@@ -20,7 +20,7 @@
 
             <!-- FORMULARIO -->
             <div class="col-md-7 col-lg-6 ml-auto">
-                <form action="./?classe=Auth&metodo=signin" method="post">
+                <form action="./?class=Auth&method=signin" method="post">
 
                     <div class="row">
                         <!-- MENSAGEM DE ERRO -->

@@ -1,4 +1,8 @@
 <?php
+namespace GaleriaPHP\Model;
+use \PDOException;
+use \PDO;
+
 class Imagem
 {
     private $id;
@@ -11,7 +15,7 @@ class Imagem
     public function __construct($id = null)
     {
         $this->id = $id;
-        $this->con = new PDO(SERVIDOR, USER, SENHA);
+        $this->con = new PDO($_ENV["DB_DSN"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"]);
         $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     public function create()

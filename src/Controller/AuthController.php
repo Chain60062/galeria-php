@@ -1,5 +1,8 @@
 <?php
-require_once('./model/User.php');
+namespace GaleriaPHP\Controller;
+
+use GaleriaPHP\Model\User;
+use \PDOException;
 
 class AuthController
 {
@@ -35,7 +38,7 @@ class AuthController
                 }
             }
         } else {
-            include("./view/signin.php");
+            require_once("src/View/signin.php");
         }
     }
     // Relacionado ao login do usuario
@@ -49,7 +52,7 @@ class AuthController
 
             header('location: ./');
         } else {
-            include("./view/login.php");
+            require_once("src/View/login.php");
         }
     }
     // encerrar sessao
@@ -76,9 +79,9 @@ class AuthController
     {
         // redirecionar para a galeria se usuario esta logado
         if ($this->loginStatus()) {
-            include './view/galeria.php' ;
+            require_once 'src/View/galeria.php' ;
         }else{
-            include './view/login.php';
+            require_once 'src/View/login.php';
         }
     }
 }
